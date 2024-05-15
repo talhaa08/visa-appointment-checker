@@ -20,7 +20,7 @@ public class WhatsApp {
                 .method("POST", HttpRequest.BodyPublishers.ofString("{\"to\":\"<WHATSAPP CHAT ID HERE>\",\"body\":\"*GERMANY BHAGO*\"}"))
                 .build();
 
-        HttpResponse<String> response = null;
+        HttpResponse<String> response;
         try {
             response = HttpClient.newHttpClient().send(request, HttpResponse.BodyHandlers.ofString());
             log.info(response.body());

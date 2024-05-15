@@ -47,7 +47,7 @@ class DropdownMonitor implements CommandLineRunner {
         // Check the number of options in the dropdown
         Elements options = dropdown.getElementsByTag("option");
         int numberOfOptions = options.size();
-        log.info("Number of options is " + numberOfOptions);
+        log.info("Number of options is {}", numberOfOptions);
 
         // If number of options is greater than 5, send email and WhatsApp messages
         if (numberOfOptions > 5) {
