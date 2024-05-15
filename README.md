@@ -1,0 +1,1 @@
+This application monitors the availability of German Student Visa Appointments for Masters and Bachelor programs for the Winter 2024/2025 intake. Upon detection of open appointments, it sends automated notifications via WhatsApp to the designated group.
