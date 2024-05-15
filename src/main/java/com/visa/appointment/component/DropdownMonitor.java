@@ -8,7 +8,6 @@ import org.jsoup.select.Elements;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
 
-import java.io.IOException;
 import java.util.concurrent.Executors;
 import java.util.concurrent.ScheduledExecutorService;
 import java.util.concurrent.TimeUnit;
@@ -37,8 +36,9 @@ class DropdownMonitor implements CommandLineRunner {
         Document doc = null;
         try {
             doc = Jsoup.connect(url).get();
-        } catch (IOException e) {
+        } catch (Exception e) {
             log.error("Webpage is Down: \n{}", e.getMessage());
+            return;
         }
 
         // Find the dropdown element by its ID
