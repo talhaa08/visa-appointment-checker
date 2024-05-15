@@ -50,7 +50,7 @@ class DropdownMonitor implements CommandLineRunner {
         log.info("Number of options is " + numberOfOptions);
 
         // If number of options is greater than 5, send email and WhatsApp messages
-        if (numberOfOptions > 4) {
+        if (numberOfOptions > 5) {
             log.info("GERMANY BHAGO BC");
             if (!notification) {
                 notification = WhatsApp.sendNotification();
